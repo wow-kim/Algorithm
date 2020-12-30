@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+Python Algorithm Interview/.vscode/launch.json
+Python Algorithm Interview/.vscode/settings.json
+.gitignore
+.vscode/settings.json
