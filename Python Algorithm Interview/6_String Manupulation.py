@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     
     def q1_a(self, s:str) -> bool:
@@ -30,7 +32,7 @@ class Solution:
         
         return s == s[::-1]
     
-    def q2_a(self, s: List(str)) -> None:
+    def q2_a(self, s: List[str]) -> None:
         '''
         02. 문자열 뒤집기
         a. 투 포인터를 이용한 스왑
@@ -41,7 +43,7 @@ class Solution:
             left += 1
             right -= 1
     
-    def q3_a(self, logs:List(str)) -> List(str):
+    def q3_a(self, logs:List[str]) -> List[str]:
         """
         03. 로그 파일 재정렬
         a. 람다와 + 연산자 
@@ -56,7 +58,7 @@ class Solution:
         letters.sort(key = lambda x: (x.split()[1], x.split()[0]))
         return letters + digits
     
-    def q4_a(self, paragraph:List(str), banned:List(str)) -> List(str):
+    def q4_a(self, paragraph:List[str], banned:List[str]) -> List[str]:
         """
         04. 가장 흔한 단어
         a. 리스트 컴프리헨션, Counter 객체 사용
@@ -69,7 +71,7 @@ class Solution:
         counts = collections.Counter(words)
         return counts.most_common(1)[0][0]
     
-    def q5_a(self, strs:List(str)) -> List(str):
+    def q5_a(self, strs:List[str]) -> List[str]:
         """
         05. 그룹 애너그램
         a. 정렬하여 딕셔너리에 추가
@@ -106,4 +108,4 @@ class Solution:
         return result
 
 answer = Solution()
-print(answer.q1_a("race a car"))
+print(answer.q1_a("race a car"))~"`
