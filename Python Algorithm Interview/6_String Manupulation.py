@@ -108,4 +108,4 @@ class Solution:
         return result
 
 answer = Solution()
-print(answer.q1_a("race a car"))~"`
+print(answer.q1_a("race a car"))
