@@ -370,7 +370,7 @@ class Solution:
             # 중위 순회 결과 분할 정복
             node = TreeNode(inorder[index])
             node.left = self.buildTree(preorder, inorder[0 : index])
-            node.right = self.buildTree(predordr, inorder[index+1 :])
+            node.right = self.buildTree(preorder, inorder[index+1 :])
             
             return node
         
