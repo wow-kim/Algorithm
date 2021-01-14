@@ -57,5 +57,7 @@ class Solution:
                 left += 1
         
         return s[start:end]
+    
+    print("check")
             
         
