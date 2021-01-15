@@ -58,6 +58,24 @@ class Solution:
         
         return s[start:end]
     
-    print("check")
+    def replacement(self, s:str,k:int)-> int:
+        """
+        77. 가장 긴 반복 문자 대체(leetcode : 424)
+        a. 투 포인터, 슬라이딩 윈도우, Counter 이용
+        """
+        import collections
+        left = right = 0
+        max_len = 0
+        counts = collections.Counter()
+        for right in range(1, len(s)+1):
+            counts[s[right-1]] += 1
+            max_char_n = counts.most_common(1)[0][1]
             
+            if right - left - max_char_n > k:
+                counts[s[left]] -= 1
+                left += 1
+
+            max_len = max(right-left, max_len)
+        
+        return right - left
         
